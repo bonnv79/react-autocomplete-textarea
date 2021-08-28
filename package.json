@@ -49,5 +49,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "get-input-selection": "^1.1.4",
+    "prop-types": "^15.7.2",
+    "textarea-caret": "^3.1.0"
+  }
 }
