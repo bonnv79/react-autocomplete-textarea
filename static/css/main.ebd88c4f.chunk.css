@@ -1,15 +1,19 @@
 .react-autocomplete-textArea {
-  width: 100%;
   border-radius: 5px;
   border: 1px solid #d9d9d9;
   padding: 4px 11px;
   line-height: 1.5;
+  box-sizing: border-box;
 }
 
 .react-autocomplete-textArea:focus {
   outline: none;
   border-color: #40a9ff;
   box-shadow: 0 1px 3px 0 #d4d9e1;
+}
+
+.react-autocomplete-textArea.fullscreen {
+  width: 100%;
 }
 
 .react-autocomplete-backdrop {
@@ -53,4 +57,4 @@
   color: #fff;
 }
 
-/*# sourceMappingURL=main.fa705884.chunk.css.map*/
+/*# sourceMappingURL=main.ebd88c4f.chunk.css.map*/
