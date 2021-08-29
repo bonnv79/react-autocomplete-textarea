@@ -1,6 +1,6 @@
 ## Changelog
 
-##### 1.2.2
+##### 1.2.3
 
 - format code for react-autocomplete-textarea lib
 

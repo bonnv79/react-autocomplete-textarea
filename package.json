@@ -1,6 +1,6 @@
 {
   "name": "react-autocomplete-textarea",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "react-autocomplete-textarea",
   "author": "bonnv79",
   "license": "MIT",
@@ -23,6 +23,9 @@
     "deploy": "build-storybook -s public && gh-pages -d storybook-static",
     "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
   },
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "react",
     "autocomplete",
