@@ -10,25 +10,29 @@ export default {
   },
 };
 
-const Template = (args) => (
-  <div style={{ width: 360 }}>
-    <ReactAutocompleteTextarea {...args} />
-  </div>
-);
+const Template = (args) => {
+  const [value, onChange] = React.useState('');
+  return (
+    <ReactAutocompleteTextarea {...args} value={value} onChange={onChange} />
+  )
+};
 
 export const Basic = Template.bind({});
 Basic.args = {
-  placeholder: "try input @",
+  placeholder: "Try input @",
   trigger: "@",
-  offsetX: 8,
   options: ["apple", "apricot", "banana", "carrot"],
-  rows: "4"
+  rows: 5,
+  cols: 50,
+  fullscreen: false,
 };
 
 export const Multipletriggers = Template.bind({});
 Multipletriggers.args = {
-  placeholder: "try input @ or @@",
+  placeholder: "Try input @ or @@",
   trigger: ["@", "@@"],
   options: { "@": ["aa", "ab", "abc", "abcd"], "@@": ["az", "ar"] },
-  rows: "4"
+  rows: 5,
+  cols: 50,
+  fullscreen: false
 };

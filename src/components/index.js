@@ -40,7 +40,8 @@ const propTypes = {
   value: PropTypes.string,
   offsetX: PropTypes.number,
   offsetY: PropTypes.number,
-  passThroughEnter: PropTypes.bool
+  passThroughEnter: PropTypes.bool,
+  fullscreen: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -65,7 +66,8 @@ const defaultProps = {
   offsetX: 0,
   offsetY: 0,
   value: null,
-  passThroughEnter: false
+  passThroughEnter: false,
+  fullscreen: false,
 };
 
 class ReactAutocompleteTextarea extends React.Component {
@@ -500,6 +502,7 @@ class ReactAutocompleteTextarea extends React.Component {
       disabled,
       onBlur,
       value,
+      fullscreen,
       ...rest
     } = this.props;
 
@@ -530,7 +533,7 @@ class ReactAutocompleteTextarea extends React.Component {
           ref={this.refInput}
           value={val}
           {...propagated}
-          className="react-autocomplete-textArea"
+          className={`react-autocomplete-textArea ${fullscreen ? 'fullscreen' : ''}`}
         />
         {this.renderAutocompleteList()}
       </span>

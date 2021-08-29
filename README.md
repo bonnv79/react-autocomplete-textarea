@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# react-autocomplete-textarea
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> react-autocomplete-textarea
+
+[![NPM](https://img.shields.io/npm/v/react-autocomplete-textarea.svg)](https://www.npmjs.com/package/react-autocomplete-textarea) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
@@ -8,27 +10,32 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 npm install --save react-autocomplete-textarea
 ```
 
-# Demo
+## Demo
 Demo and playground are available [here](https://bonnv79.github.io/react-autocomplete-textarea/)
 
-# Usage Example
-```JavaScript
-import TextInput from 'react-autocomplete-textarea';
-import 'react-autocomplete-textarea/dist/bundle.css';
+## Versions
+[CHANGELOG](CHANGELOG.md)
 
-<TextInput options={["apple", "apricot", "banana", "carrot"]} />
+## Usage Example
+```JavaScript
+import React from 'react';
+import TextInput from 'react-autocomplete-textarea';
+
+const [value, onChange] = React.useState('');
+<TextInput options={["apple", "apricot", "banana", "carrot"]} value={value} onChange={onChange} />
 ```
 
-# Multiple Triggers and Options Example
+## Multiple Triggers and Options Example
 ```JavaScript
+import React from 'react';
 import TextInput from 'react-autocomplete-textarea';
-import 'react-autocomplete-textarea/dist/bundle.css';
 
-<TextField trigger={["@", "@@"]} options={{"@": ["aa", "ab", "abc", "abcd"], "@@": ["az", "ar"]}} />
+const [value, onChange] = React.useState('');
+<TextField trigger={["@", "@@"]} options={{"@": ["aa", "ab", "abc", "abcd"], "@@": ["az", "ar"]}} value={value} onChange={onChange} />
 ```
 Here for trigger `@` first set of options will resolve and for `@@` — second set.
 
-## Dev
+## Develop
 
 In the project directory, you can run:
 
@@ -41,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-# Features
+## Features
 * Supports both keyboard and mouse for option selection
 * Supports responsiveness and works on every device
 * Supports lazy-loading and dynamic option list updates
@@ -153,7 +160,7 @@ If true, then an enter / return keypress is passed on (after being used to autoc
 Useful if you want to have the form submit as soon as a single value is chosen.
 
 # Styles Customization
-By default styles are defined in `"react-autocomplete-textarea/dist/bundle.css"`, however, you may define your custom styles instead for following entities:
+By default styles are defined in `"react-autocomplete-textarea/dist/index.css"`, however, you may define your custom styles instead for following entities:
 
 * `ul.react-autocomplete-textArea`
 * `ul.react-autocomplete-backdrop`
@@ -165,9 +172,6 @@ By default styles are defined in `"react-autocomplete-textarea/dist/bundle.css"`
 1. Native "Undo" action is not fully supported. It might be changed in the future but currently there is no out-of-the-box solution, which solves this issue for all browsers at once.
 2. It is considered that list of options will be always small, lets say up to 2000 items. Therefore, options are stored internally as array. If your use-case requires to work with huge lists, I would recommend to reimplement option internal representation as binary search tree instead.
 
-```
-
 ## License
 
 MIT © [bonnv79](https://github.com/bonnv79)
-
