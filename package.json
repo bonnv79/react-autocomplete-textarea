@@ -21,8 +21,7 @@
     "build-storybook": "build-storybook -s public",
     "clean": "rimraf dist",
     "deploy": "build-storybook -s public && gh-pages -d storybook-static",
-    "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__",
-    "publish": "npm run build && npm publish"
+    "build": "npm run clean && cross-env NODE_ENV=production babel src/components --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,stories.js,__snapshots__"
   },
   "keywords": [
     "react",
