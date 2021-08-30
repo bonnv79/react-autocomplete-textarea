@@ -1,5 +1,9 @@
 ## Changelog
 
+##### 1.3.0
+
+- format package.json file
+
 ##### 1.2.3
 
 - format code for react-autocomplete-textarea lib
