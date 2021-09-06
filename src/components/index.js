@@ -1,6 +1,6 @@
 import React, { createRef } from "react";
 import PropTypes from "prop-types";
-import getCaretCoordinates from "textarea-caret";
+import getCaretCoordinates from "./textareaCaret";
 import getInputSelection, { setCaretPosition } from "get-input-selection";
 import BodyEnd from "./BodyEnd";
 import "./index.css";
@@ -386,7 +386,7 @@ class ReactAutocompleteTextarea extends React.Component {
     const slug = this.getMatch(str, caret, options);
 
     if (slug) {
-      const caretPos = getCaretCoordinates(input, caret - 1); // GR: Fix line break tooltip when text is not newline
+      const caretPos = getCaretCoordinates(input, caret - 1, { scroll: true }); // GR: Fix line break tooltip when text is not newline
       const rect = input.getBoundingClientRect();
 
       const top = rect.top + caretPos.top + window.scrollY - input.scrollTop; // GR: Use top for tooltip

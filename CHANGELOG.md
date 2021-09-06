@@ -1,5 +1,9 @@
 ## Changelog
 
+##### 1.3.1
+
+- GR: Fix tooltip not breaking new line when text is newline
+
 ##### 1.3.0
 
 - format package.json file
