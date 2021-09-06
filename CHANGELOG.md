@@ -1,6 +1,6 @@
 ## Changelog
 
-##### 1.3.1
+##### 1.3.2
 
 - GR: Fix tooltip not breaking new line when text is newline
 
