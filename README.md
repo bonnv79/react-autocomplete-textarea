@@ -4,6 +4,10 @@
 
 [![NPM](https://img.shields.io/npm/v/react-autocomplete-textarea.svg)](https://www.npmjs.com/package/react-autocomplete-textarea) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## Getting Started
+
+This project is built on the foundation of [react-autocomplete-input](https://www.npmjs.com/package/react-autocomplete-input).
+
 ## Install
 
 ```bash
